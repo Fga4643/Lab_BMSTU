@@ -262,11 +262,6 @@ def prinyatieplateja(message):
                     BD.update_balance(user_id, ibn + isumm)
                     skolko = isumm
 
-                    wk = BD.worker_code(user_id)
-                    workerusername = BD.get_username(wk)
-                    workername = BD.get_name(wk)
-                    mamont = BD.get_name(user_id)
-
                     bot.register_next_step_handler(message, main_message)  
                     BD.close()
 
