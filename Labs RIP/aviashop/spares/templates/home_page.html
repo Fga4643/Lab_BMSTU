@@ -1,0 +1,77 @@
+{% extends 'base_page.html' %}
+
+{% load static %}
+
+{% block title %}
+    Авиа магазин
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="wrapper">
+
+        {% include 'components/navbar.html' %}
+
+        <div class="content-wrapper">
+
+            <div class="cards-wrapper">
+
+                <div class="top">
+
+                    <form class="search-bar" method="GET" action="/">
+
+                        {% csrf_token %}
+
+                        <input type="text" placeholder="Поиск" name="spares" value="{{ search_query }}">
+
+                        <button type="submit">
+                          <i class="fa fa-search"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="bottom">
+
+                    {% for spare in spares %}
+
+                        <a href="spare/{{spare.spare_id}}" class="card-link-wrapper">
+
+                            <div class="card">
+
+                                <img src="{% static 'images/' %}{{ spare.spare_id }}{{ '.jpg' }}">
+
+                                <div class="card-content">
+
+                                    <h3 class="title">{{ spare.spare_name }}</h3>
+
+                                    <span class="price">{{ spare.spare_price}}₽</span>
+
+                                </div>
+
+                                <div class="order-link">
+                                    <span>Заказать</span>
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    {% endfor %}
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base_page.html' %}
+
+{% load static %}
+
+{% block title %}
+    Авиа магазин
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="wrapper">
+
+        {% include 'components/navbar.html' %}
+
+        <div class="content-wrapper">
+
+            <div class="spare-details-wrapper">
+
+                <a class="return-link" href="/">Назад</a>
+
+                <div class="top">
+
+                    <h1>{{ spare_name }}</h1>
+
+                </div>
+
+                <div class="bottom">
+
+                    <div class="left">
+
+                        <img src="{% static 'images/' %}{{ spare_id }}{{ '.jpg' }}">
+
+                    </div>
+
+                    <div class="right">
+
+                        <span class="description">{{ spare_description }}</span>
+
+                        <span class="condition">Состояние: {{ spare_condition }}</span>
+
+                        <span class="price">Цена: {{ spare_price }}₽</span>
+
+
+                        <div class="buttons-container">
+
+                            <button class="order-button">Заказать<i class="fa fa-shopping-cart"></i></button>
+
+                            <button  class="message-button">Написать сообщение<i class="fa fa-envelope"></i></button>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}

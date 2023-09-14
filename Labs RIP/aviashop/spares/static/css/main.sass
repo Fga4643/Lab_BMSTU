@@ -1,0 +1,268 @@
+
+$background: #e3e9f7
+$primary: #212526
+$secondary: #675cff
+
+body
+	font-family: "Montserrat"
+	background: $background
+
+	.wrapper
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		.navbar
+			width: 80%
+			height: 70px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background: #fefefe
+			padding: 0 40px
+			border-radius: 0 0 10px 10px
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+
+			.logo
+				font-size: 24px
+				font-weight: 600
+				color: $primary
+
+			.menu
+				display: flex
+
+				a
+					text-decoration: none
+
+					.menu-item
+						padding: 8px 18px
+						transition: 0.2s
+						border-radius: 10px
+
+						&:hover
+							background: #f6f4ff
+
+						span, i
+							color: $primary
+							font-size: 18px
+							font-weight: 600
+
+						i
+							margin-left: 5px
+
+
+		.content-wrapper
+			width: 100%
+			display: flex
+			justify-content: center
+			padding: 100px 0
+
+
+			.cards-wrapper
+				width: 80%
+				background: #fff
+				border-radius: 10px
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+
+				.top
+					width: 100%
+					height: 100px
+					display: flex
+					justify-content: flex-end
+					align-items: center
+					padding: 0 50px 0 0
+					border-bottom: 2px solid #675cff
+
+					.search-bar
+						width: 100%
+						max-width: 350px
+						background: rgba(255, 255, 255, 0.2)
+						display: flex
+						align-items: center
+						border-radius: 60px
+						padding: 0 10px
+						border: 2px solid #675cff
+						height: 50px
+
+
+						input
+							background: transparent
+							flex: 1
+							border: 0
+							outline: none
+							padding: 16px 20px
+							font-size: 16px
+							color: #cac7ff
+
+							&::placeholder
+								color: #cac7ff
+
+						button
+							background: none
+							border: 0
+							border-radius: 50%
+							width: 40px
+							height: 40px
+							cursor: pointer
+
+							i
+								font-size: 22px
+								color: #675cff
+
+
+				.bottom
+					width: 100%
+					display: flex
+					justify-content: center
+					flex-wrap: wrap
+					gap: 35px
+					padding: 50px 0
+
+					.card-link-wrapper
+						text-decoration: none
+						color: $primary
+						width: 350px
+						display: flex
+						flex-basis: calc((100% / 3) - 60px)
+
+						.card
+							display: flex
+							flex-direction: column
+							align-items: center
+							width: 100%
+							border-radius: 20px
+							overflow: hidden
+							box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
+							cursor: pointer
+							transition: 0.3s
+
+							&:hover
+								box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+								transform: translate(0px, -8px)
+
+							img
+								width: 100%
+								height: 300px
+								background-size: cover
+
+							.card-content
+								width: 100%
+								display: flex
+								flex-direction: column
+								justify-content: center
+								padding: 15px 5px
+								min-height: 150px
+
+								.title
+									font-size: 18px
+									text-align: center
+									margin-bottom: 15px
+
+								.price
+									color: #222f3e
+									text-align: center
+									font-size: 20px
+
+
+							.order-link
+								border: 0
+								width: 100%
+								background: #675cff
+								cursor: pointer
+								text-decoration: none
+								color: #fff
+								display: flex
+								justify-content: center
+								align-items: center
+								padding: 10px 0
+
+
+			.spare-details-wrapper
+				width: 80%
+				background: #fff
+				border-radius: 10px
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+				padding: 25px
+				position: relative
+
+				.return-link
+					position: absolute
+					text-decoration: none
+					left: 35px
+					color: $primary
+					font-size: 20px
+					transition: 0.1s
+
+					&:hover
+						color: $secondary
+
+				.top
+					width: 100%
+					display: flex
+					justify-content: center
+					align-items: center
+					margin-bottom: 20px
+
+					h1
+						font-size: 24px
+
+				.bottom
+					width: 100%
+					display: flex
+
+					.left
+						width: 600px
+						padding: 0 20px
+
+						img
+							width: 100%
+							border-radius: 15px
+
+					.right
+						width: calc(100% - 600px)
+						display: flex
+						flex-direction: column
+						padding: 20px
+
+						.description
+							font-size: 18px
+							margin-bottom: 15px
+
+						.condition
+							font-size: 18px
+							margin-bottom: 15px
+
+						.price
+							font-size: 18px
+
+						.buttons-container
+							width: 100%
+							display: flex
+							margin-top: 50px
+
+							button
+								font-size: 18px
+								font-weight: bold
+								background: $secondary
+								padding: 20px
+								text-align: center
+								text-decoration: none
+								color: #ffffff
+								border-radius: 5px
+								border: none
+								cursor: pointer
+								outline: none
+								box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+								transition: 0.3s
+
+								&:hover
+									box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)
+									transform: scale(1.1)
+
+								i
+									margin-left: 10px
+
+							.order-button
+								margin-right: 50px
+
